@@ -1,23 +1,24 @@
 import React from "react";
-import { Box } from "@mui/material";
-import { ReactComponent as MidIcon } from "./../../assets/Mid.svg";
-import { ReactComponent as Table } from "./../../assets/Table.svg";
+import { ReactComponent as RoundTable } from "./../../assets/Mid.svg";
+import { ReactComponent as SquareTable } from "./../../assets/Table.svg";
 
-function ImageComponent() {
+const ImageComponent = ({ type, onClick, label }) => {
+  const TableIcon = type === "round" ? RoundTable : SquareTable;
+
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      width="100%"
-      height="100%"
-      p={2}
-      border="1px solid #ccc"
-      borderRadius={2}
+    <div
+      onClick={onClick}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        cursor: "pointer",
+        marginBottom: "1rem",
+      }}
     >
-      <MidIcon style={{ width: "100px", height: "100px" }} />
-      <Table style={{ width: "100px", height: "100px" }} />
-    </Box>
+      <TableIcon style={{ width: "50px", height: "50px" }} />
+      <span style={{ marginLeft: "0.5rem" }}>{label}</span>
+    </div>
   );
-}
+};
+
 export default ImageComponent;

@@ -4,17 +4,19 @@ import ImageComponent from "./draggable/ImageComponent";
 const Sidebar = ({ addTable }) => {
   return (
     <div style={{ width: "20%", padding: "1rem", background: "#f4f4f4" }}>
-      <h3>Table Options</h3>
-      <ImageComponent
-        src="path/to/round-table-image.png"
-        alt="Round Table"
-        onClick={() => addTable("round")}
-      />
-      <ImageComponent
-        src="path/to/square-table-image.png"
-        alt="Square Table"
-        onClick={() => addTable("square")}
-      />
+      <div>
+        <h3>Table Options</h3>
+        <ImageComponent
+          type="round"
+          onClick={() => addTable("round")}
+          label="Round Table"
+        />
+        <ImageComponent
+          type="square"
+          onClick={() => addTable("square")}
+          label="Square Table"
+        />
+      </div>
 
       <hr />
       <h3>Table Details</h3>
