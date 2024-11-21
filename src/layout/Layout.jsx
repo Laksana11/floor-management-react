@@ -2,14 +2,14 @@ import React from "react";
 import VerticalDrawer from "../components/VerticalDrawer";
 import { AppBar, Box, Typography } from "@mui/material";
 import { DndProvider } from "react-dnd";
-
+import { Basket } from "../components/Basket";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import TableManager from "../components/TableManager";
+import { Stack, Button } from "@mui/material";
+import Grid from "@mui/material/Grid";
 
 const Layout = () => {
   return (
     <div className="d-flex">
-      {/* Left Drawer Navigation */}
       <VerticalDrawer />
 
       {/* Main Content Area */}
@@ -25,8 +25,26 @@ const Layout = () => {
           </Typography>
         </AppBar>
 
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <div style={{ border: "1px solid black", padding: "8px" }}>
+              Tables
+            </div>
+          </Grid>
+
+          <Grid item xs={9}>
+            <div style={{ border: "1px solid black", padding: "8px" }}>
+              Main Room
+              <Stack spacing={2} align="right" direction="row">
+                <Button variant="contained">+ Add Room</Button>
+                <Button variant="text">Save Room</Button>
+              </Stack>
+            </div>
+          </Grid>
+        </Grid>
+
         <DndProvider backend={HTML5Backend}>
-          <TableManager />;
+          <Basket />
         </DndProvider>
       </Box>
     </div>
