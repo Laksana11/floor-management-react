@@ -1,7 +1,7 @@
-import React from "react";
-import { useDrag } from "react-dnd";
+import React from 'react';
+import { useDrag } from 'react-dnd';
 
-const TABLES = "TABLES"; // The type of draggable items
+const TABLES = 'TABLES'; // The type of draggable items
 
 function DraggableCard({ table }) {
   const [{ isDragging }, dragRef] = useDrag({
@@ -17,12 +17,13 @@ function DraggableCard({ table }) {
       ref={dragRef}
       style={{
         opacity: isDragging ? 0.5 : 1,
-        cursor: "move",
-        padding: "8px",
-        border: "1px solid #ccc",
-        borderRadius: "4px",
+        cursor: 'move',
+        padding: '8px',
+        border: '1px solid #ccc',
+        borderRadius: '4px',
       }}
     >
+      
       {<table.image />}
       <p>{table.name}</p>
     </div>
