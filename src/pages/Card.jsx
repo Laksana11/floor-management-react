@@ -1,11 +1,7 @@
 import React, {useState} from 'react'
 import { ResizableBox } from 'react-resizable';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { setDimensions } from './../redux/slices/resizeSlice';
 import 'react-resizable/css/styles.css'; 
 import { useDrag } from 'react-dnd';
-import { ReactComponent as Mid } from './../assets/Mid.svg'
-import { ReactComponent as Table } from './../assets/Table.svg'
 import ImageComponent from './../components/draggable/ImageComponent'
 
 export const Card = ({ id, name, image, key, h, w, isResizable=false }) => {
@@ -30,7 +26,6 @@ export const Card = ({ id, name, image, key, h, w, isResizable=false }) => {
             onResizeStop={(e, data) => {
                 const { width, height } = data.size;
                 setSize({ width, height });
-                console.log({data});
             }}
         >
             <div
