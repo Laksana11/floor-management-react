@@ -5,8 +5,6 @@ import {ReactComponent as Vector } from './../assets/Vector.svg'
 
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 const NAVIGATION = [
   { title: 'Home', icon: <HomeIcon /> },
