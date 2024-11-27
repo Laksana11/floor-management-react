@@ -414,7 +414,7 @@ export const Basket = () => {
                       onChange={(e) => field.onChange(e.target.checked)}
                       sx={{
                         "& .Mui-checked": {
-                          color: "#b02522", // Thumb color
+                          color: "darkred", // Thumb color
                         },
                         "& .Mui-checked + .MuiSwitch-track": {
                           backgroundColor: "#b02522", // Track color
