@@ -1,29 +1,6 @@
 import React from "react";
 import ImageComponent from "./draggable/ImageComponent";
-
 import { useDrag } from "react-dnd";
-
-const DraggableTable = ({ type, label }) => {
-  const [, drag] = useDrag({
-    type: "table",
-    item: { type },
-  });
-
-  return (
-    <div
-      ref={drag}
-      style={{
-        margin: "10px 0",
-        padding: "10px",
-        border: "1px dashed #ddd",
-        textAlign: "center",
-        cursor: "move",
-      }}
-    >
-      {label}
-    </div>
-  );
-};
 
 const Sidebar = ({ addTable }) => {
   return (
